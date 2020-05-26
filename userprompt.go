@@ -17,12 +17,12 @@ var (
 
 // UserPrompt: Prompt for input and store it as variable.
 func UserPrompt(prompt string, sensitive bool) (string, error) {
-	return PromptWithOutput(prompt, sensitive, Output, "")
+	return UserPromptWithOutput(prompt, sensitive, Output, "")
 }
 
 // UserPromptWithDefault: Prompt the user for input but if user don't put anything it will use default value
 func UserPromptWithDefault(prompt, defaultValue string, sensitive bool) (string, error) {
-	return PromptWithOutput(prompt, sensitive, Output, defaultValue)
+	return UserPromptWithOutput(prompt, sensitive, Output, defaultValue)
 }
 
 // PromptPromptWithOutput: Prompt the user for input and gives the output
